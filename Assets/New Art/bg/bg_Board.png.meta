@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: bda677d908d44df4190b19f2a3707faa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8362691887234908717
+    second: bg_Board_0
+  - first:
+      213: 2437864398703387546
+    second: bg_Board_1
+  - first:
+      213: -7690335785944977051
+    second: bg_Board_2
+  - first:
+      213: 72273299651453201
+    second: bg_Board_3
+  - first:
+      213: -5915987274460374717
+    second: bg_Board_4
+  - first:
+      213: -4239283265151240587
+    second: bg_Board_5
+  - first:
+      213: 3430819188114118010
+    second: bg_Board_6
+  - first:
+      213: 7875775356836989794
+    second: bg_Board_7
+  - first:
+      213: 2560916335758970080
+    second: bg_Board_8
+  - first:
+      213: 1136841754302709021
+    second: bg_Board_9
+  - first:
+      213: 766877120608235482
+    second: bg_Board_10
+  - first:
+      213: -6310435553412615123
+    second: bg_Board_11
+  - first:
+      213: 2531406645028277948
+    second: bg_Board_12
+  - first:
+      213: 1283899009437507849
+    second: bg_Board_13
+  - first:
+      213: 3820250356472095156
+    second: bg_Board_14
+  - first:
+      213: -1118037537325149891
+    second: bg_Board_15
+  - first:
+      213: -8765676904588500203
+    second: bg_Board_16
+  - first:
+      213: -6388093691431717756
+    second: bg_Board_17
+  - first:
+      213: -996825634304125071
+    second: bg_Board_18
+  - first:
+      213: 1473142310254738912
+    second: bg_Board_19
+  - first:
+      213: -539405885618156313
+    second: bg_Board_20
+  - first:
+      213: -2962482144259647302
+    second: bg_Board_21
+  - first:
+      213: -2921649688476421056
+    second: bg_Board_22
+  - first:
+      213: -9061068011095082183
+    second: bg_Board_23
+  - first:
+      213: -3727314587535026287
+    second: bg_Board_24
+  - first:
+      213: -2612994209418760852
+    second: bg_Board_25
+  - first:
+      213: -4566288218137654301
+    second: bg_Board_26
+  - first:
+      213: 586650931044196050
+    second: bg_Board_27
+  - first:
+      213: -7456244940114988830
+    second: bg_Board_28
+  - first:
+      213: 3005643118325642645
+    second: bg_Board_29
+  - first:
+      213: -1062834717890316774
+    second: bg_Board_30
+  - first:
+      213: -3232672040740879306
+    second: bg_Board_31
+  - first:
+      213: -5022577421768933986
+    second: bg_Board_32
+  - first:
+      213: -7055250508977228231
+    second: bg_Board_33
+  - first:
+      213: 8213342691976410551
+    second: bg_Board_34
+  - first:
+      213: -6461995565017650822
+    second: bg_Board_35
+  - first:
+      213: 1463295359827210242
+    second: bg_Board_36
+  - first:
+      213: 3513152492988352967
+    second: bg_Board_37
+  - first:
+      213: 2098088332168166773
+    second: bg_Board_38
+  - first:
+      213: -7610874393201688525
+    second: bg_Board_39
+  - first:
+      213: -5812260171773376433
+    second: bg_Board_40
+  - first:
+      213: 2771058238892053795
+    second: bg_Board_41
+  - first:
+      213: 1404152403988200290
+    second: bg_Board_42
+  - first:
+      213: 6808012889038003703
+    second: bg_Board_43
+  - first:
+      213: -5096150056878043656
+    second: bg_Board_44
+  - first:
+      213: 6744594204219951957
+    second: bg_Board_45
+  - first:
+      213: -2816673268807824789
+    second: bg_Board_46
+  - first:
+      213: -1235503780672845707
+    second: bg_Board_47
+  - first:
+      213: -3959183618511299712
+    second: bg_Board_48
+  - first:
+      213: -2125501185928844341
+    second: bg_Board_49
+  - first:
+      213: -642626330270306267
+    second: bg_Board_50
+  - first:
+      213: 8878666555063669186
+    second: bg_Board_51
+  - first:
+      213: 3246590408757667298
+    second: bg_Board_52
+  - first:
+      213: 8055913909135942822
+    second: bg_Board_53
+  - first:
+      213: -5423306580000834930
+    second: bg_Board_54
+  - first:
+      213: 8057977774187316957
+    second: bg_Board_55
+  - first:
+      213: -3283735716801363323
+    second: bg_Board_56
+  - first:
+      213: 3082051494961724487
+    second: bg_Board_57
+  - first:
+      213: -7160129084096098817
+    second: bg_Board_58
+  - first:
+      213: -4465545496178126673
+    second: bg_Board_59
+  - first:
+      213: 4024013806490557175
+    second: bg_Board_60
+  - first:
+      213: 6952224908318825885
+    second: bg_Board_61
+  - first:
+      213: 6484395205578631815
+    second: bg_Board_62
+  - first:
+      213: -8722412762543717529
+    second: bg_Board_63
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 115
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_Board_1
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 867
+        width: 143
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93694711c805d120800000000000000
+      internalID: 2437864398703387546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_Board_2
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 867
+        width: 115
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561764b0950764590800000000000000
+      internalID: -7690335785944977051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_Board_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 867
+        width: 115
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1116870ee24c00100800000000000000
+      internalID: 72273299651453201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_Board_5
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 867
+        width: 142
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576f66eb45a0b25c0800000000000000
+      internalID: -4239283265151240587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_Board_29
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 637
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595b565dd7036b920800000000000000
+      internalID: 3005643118325642645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_Board_34
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 637
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5fdc589a7abf170800000000000000
+      internalID: 8213342691976410551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
