@@ -2,11 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class GameMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    [SerializeField] private Button _pauseButton;
+    [SerializeField] private Button _resumeButton;
+    [SerializeField] private Button _pauseExitButton;
+    [SerializeField] private Button _gameOverExitButton;
     public GameObject pauseMenuUI;
+
+    private void Start()
+    {
+        _pauseButton.onClick.AddListener(Pause);
+        _resumeButton.onClick.AddListener(Resume);
+        _pauseExitButton.onClick.AddListener(Quit);
+        _gameOverExitButton.onClick.AddListener(Quit);
+    }
 
     // Update is called once per frame
     void Update()

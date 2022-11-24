@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bomb : Dot
 {
-    float clicked = 0;
-    float clicktime = 0;
-    float clickdelay = 0.5f;
+    private float clicked = 0;
+    private float clicktime = 0;
+    private float clickdelay = 0.5f;
 
-    bool DoubleClick()
+    private bool DoubleClick()
     {
         if (clicked == 1) clicktime = Time.time;
         if (clicked > 1 && Time.time - clicktime < clickdelay)
@@ -28,8 +28,8 @@ public class Bomb : Dot
             clicked++;
             if (DoubleClick())
             {
+                board.currentDot = this;
                 otherDot = null;
-                Bomb bomb = (Bomb)this;
                 ActivateBomb();
                 board.DestroyMatches();
                 OnDecreaceAction();
@@ -37,45 +37,28 @@ public class Bomb : Dot
         }
     }
 
-    //private void OnMouseOver()
-    //{
-    //    if (Input.GetMouseButtonDown(1))
-    //    {
-    //        otherDot = null;
-    //        Bomb bomb = (Bomb)this;
-    //        ActivateBomb();
-    //        board.DestroyMatches();
-    //        OnDecreaceAction();
-    //    }
-    //}
-
     public void ActivateBomb()
     {
+        if (this.tag == "ColorBomb")
+        {
+            findMatches.GetRandomNearColorDot(this);
+        }
+
         if (this.tag == "RowBomb")
         {
             findMatches.GetRowDots(row);
-        }
-        else if (otherDot != null && otherDot.tag == "RowBomb")
-        {
-            findMatches.GetRowDots(otherDot.row);
         }
 
         if (this.tag == "ColumnBomb")
         {
             findMatches.GetColumnDots(colum);
         }
-        else if (otherDot != null && otherDot.tag == "ColumnBomb")
-        {
-            findMatches.GetColumnDots(otherDot.colum);
-        }
 
         if (this.tag == "AdjacentBomb")
         {
             findMatches.GetAdjacentDots(colum, row);
         }
-        else if (otherDot != null && otherDot.tag == "AdjacentBomb")
-        {
-            findMatches.GetAdjacentDots(otherDot.colum, otherDot.row);
-        }
     }
+
+   
 }

@@ -6,10 +6,10 @@ using UnityEngine;
 public class CameraScalar : MonoBehaviour
 {
     private Board board;
-    public float cameraOffset;
-    public float aspectRation = 0.562f;
-    public float padding = 2;
-    public float yOffset = 1;
+    [SerializeField] private float cameraOffset;
+    [SerializeField] private float aspectRation;
+    [SerializeField] private float padding;
+    [SerializeField] private float yOffset;
 
     // Start is called before the first frame update
     void Start()

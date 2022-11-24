@@ -17,12 +17,12 @@ public class EndGameRequirments
 
 public class EndGameManager : MonoBehaviour
 {
-    public GameObject gameOverMenuUI;
-    public Text counter;
-    public EndGameRequirments requirments;
+    [SerializeField] private GameObject gameOverMenuUI;
+    [SerializeField] private Text counter;
     private Board _board;
-    public int currentCounterValue;
-    private float timerSeconds = 1;
+    [SerializeField] private int currentCounterValue;
+    [SerializeField] private float timerSeconds = 1;
+    public EndGameRequirments requirments;
 
     // Start is called before the first frame update
     void Start()
@@ -47,11 +47,9 @@ public class EndGameManager : MonoBehaviour
         if (currentCounterValue <= 0)
         {
             _board.currentState = GameState.gameOver;
-            Debug.Log("Game Over!");
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (requirments.gameType == GameType.Time && currentCounterValue > 0)

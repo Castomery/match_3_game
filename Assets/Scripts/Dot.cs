@@ -28,6 +28,7 @@ public class Dot : MonoBehaviour
     private Vector2 firstTouchPosition = Vector2.zero;
     private Vector2 lastTouchPosition = Vector2.zero;
     private Vector2 tempPosition;
+    private ObjectPool _objectPool;
 
     // Start is called before the first frame update
     public void Start()
@@ -43,7 +44,7 @@ public class Dot : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
+    private void Update()
     {
         targetX = colum;
         targetY = row;
@@ -72,6 +73,16 @@ public class Dot : MonoBehaviour
         }
     }
 
+    public void InitObjectPool(ObjectPool objectPool)
+    {
+        _objectPool = objectPool;
+    }
+
+    public void ReturnToPool()
+    {
+        _objectPool.Return(this);
+    }
+
     protected IEnumerator CheckMoveCor()
     {
 
@@ -81,8 +92,15 @@ public class Dot : MonoBehaviour
 
             if (bomb.tag == "ColorBomb")
             {
-                findMatches.MatchDotsOfColor(otherDot.tag);
-                isMatched = true;
+                if (otherDot is Bomb)
+                {
+                    yield return null;
+                }
+                else
+                {
+                    findMatches.MatchDotsOfColor(this, otherDot.tag);
+                }
+                
             }
 
             bomb.ActivateBomb();   
@@ -93,8 +111,14 @@ public class Dot : MonoBehaviour
 
             if (otherDot.tag == "ColorBomb")
             {
-                findMatches.MatchDotsOfColor(this.tag);
-                otherDot.isMatched = true;
+                if (this is Bomb)
+                {
+                    yield return null;
+                }
+                else
+                {
+                    findMatches.MatchDotsOfColor(otherDot, this.tag);
+                }
             }
             bomb.ActivateBomb();
         }
@@ -112,7 +136,7 @@ public class Dot : MonoBehaviour
                 SwitchDots();
                 yield return new WaitForSeconds(0.5f);
                 board.currentDot = null;
-                board.currentState = GameState.move;
+                board._isChangesEnds = true;
             }
             else
             {
@@ -125,7 +149,7 @@ public class Dot : MonoBehaviour
                 }
                 board.DestroyMatches();
             }
-            //otherDot = null;
+            otherDot = null;
         }
 
     }
@@ -157,6 +181,7 @@ public class Dot : MonoBehaviour
     {
         if (Mathf.Abs(lastTouchPosition.y - firstTouchPosition.y) > swipeResist || Mathf.Abs(lastTouchPosition.x - firstTouchPosition.x) > swipeResist)
         {
+            board._isChangesEnds = false;
             board.currentState = GameState.wait;
             swipeAngle = Mathf.Atan2(lastTouchPosition.y - firstTouchPosition.y, lastTouchPosition.x - firstTouchPosition.x) * 180 / Mathf.PI;
             MovePieces();
@@ -164,7 +189,7 @@ public class Dot : MonoBehaviour
         }
         else
         {
-            board.currentState = GameState.move;
+            board._isChangesEnds = true;
         }
     }
 
@@ -184,7 +209,7 @@ public class Dot : MonoBehaviour
         }
         else
         {
-            board.currentState = GameState.move;
+            board._isChangesEnds = true;
         }
     }
 
@@ -217,7 +242,7 @@ public class Dot : MonoBehaviour
         }
         else
         {
-            board.currentState = GameState.move;
+            board._isChangesEnds = true;
         }
     }
 

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
-    public int score;
-    public Text finalScoreText;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private int score;
+    [SerializeField] private Text finalScoreText;
 
     // Update is called once per frame
     void Update()

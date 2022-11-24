@@ -79,7 +79,31 @@ public class FindMatches : MonoBehaviour
         yield return null;
     }
 
-    public void MatchDotsOfColor(string color)
+    public void GetRandomNearColorDot(Dot dot)
+    {
+        List<Dot> dots = new List<Dot>();
+        if (dot.colum > 0 && !board.IsBomb(board.allDots[dot.colum - 1, dot.row]))
+        {
+            dots.Add(board.allDots[dot.colum - 1, dot.row]);
+        }
+        if (dot.colum < board.width-1 && !board.IsBomb(board.allDots[dot.colum + 1, dot.row]))
+        {
+            dots.Add(board.allDots[dot.colum + 1, dot.row]);
+        }
+        if (dot.row > 0 && !board.IsBomb(board.allDots[dot.colum, dot.row - 1]))
+        {
+            dots.Add(board.allDots[dot.colum, dot.row - 1]);
+        }
+        if (dot.row <board.height-1 && !board.IsBomb(board.allDots[dot.colum, dot.row + 1]))
+        {
+            dots.Add(board.allDots[dot.colum, dot.row + 1]);
+        }
+        MatchDotsOfColor(dot, dots[Random.Range(0, dots.Count)].tag);
+    }
+
+    
+
+    public void MatchDotsOfColor(Dot dot,string color)
     {
         for (int i = 0; i < board.width; i++)
         {
@@ -87,7 +111,11 @@ public class FindMatches : MonoBehaviour
             {
                 if (board.allDots[i, j] != null)
                 {
-                    if (board.allDots[i, j].tag == color || board.allDots[i, j].tag == "ColorBomb")
+                    if (board.allDots[i,j] is Bomb && board.allDots[i,j] != dot)
+                    {
+                        continue;
+                    }
+                    if (board.allDots[i, j].tag == color || board.allDots[i,j] == dot)
                     {
                         AddToListAndMatch(board.allDots[i, j]);
                     }
@@ -127,6 +155,10 @@ public class FindMatches : MonoBehaviour
                                 GetAdjacentDots(dot.colum, dot.row);
                             }
                         }
+                        else if (dot.tag == "ColorBomb")
+                        {
+                            GetRandomNearColorDot(dot);
+                        }
 
                         AddToListAndMatch(board.allDots[i, j]);
                     }
@@ -157,6 +189,10 @@ public class FindMatches : MonoBehaviour
                         GetAdjacentDots(column, i);
                     }
                 }
+                else if (dot.tag == "ColorBomb")
+                {
+                    GetRandomNearColorDot(dot);
+                }
 
                 AddToListAndMatch(board.allDots[column, i]);
             }
@@ -185,49 +221,16 @@ public class FindMatches : MonoBehaviour
                         GetAdjacentDots(i, row);
                     }
                 }
+                else if (dot.tag == "ColorBomb")
+                {
+                    GetRandomNearColorDot(dot);
+                }
 
                 AddToListAndMatch(board.allDots[i, row]);
             }
+
         }
 
     }
 
-    public void Checkbombs(Matchtype matchtype)
-    {
-        if (board.currentDot != null)
-        {
-            if (board.currentDot.isMatched && board.currentDot.tag == matchtype.color)
-            {
-                board.currentDot.isMatched = false;
-
-                if ((board.currentDot.swipeAngle > -45 && board.currentDot.swipeAngle <= 45)
-                    || (board.currentDot.swipeAngle < -135 || board.currentDot.swipeAngle >= 135))
-                {
-                    board.MakeRowBomb(board.currentDot);
-                }
-                else
-                {
-                    board.MakeColumnBomb(board.currentDot);
-                }
-            }
-            else if (board.currentDot.otherDot != null)
-            {
-                Dot otherDot = board.currentDot.otherDot;
-                if (otherDot.isMatched && otherDot.tag == matchtype.color)
-                {
-                    otherDot.isMatched = false;
-
-                    if ((board.currentDot.swipeAngle > -45 && board.currentDot.swipeAngle <= 45)
-                        || (board.currentDot.swipeAngle < -135 || board.currentDot.swipeAngle >= 135))
-                    {
-                        board.MakeRowBomb(board.currentDot.otherDot);
-                    }
-                    else
-                    {
-                        board.MakeColumnBomb(board.currentDot.otherDot);
-                    }
-                }
-            }
-        }
-    }
 }
